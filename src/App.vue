@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <top-nav />
     <router-view />
   </div>
 </template>
-
+<script>
+export default {
+  name: "App",
+  components: {
+    TopNav: () => import("./components/TopNav.vue"),
+  },
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
