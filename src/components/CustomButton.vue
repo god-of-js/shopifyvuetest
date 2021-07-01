@@ -38,6 +38,14 @@ button {
   background: $white;
   border-radius: 4px;
 }
+.black-border {
+  background: $white;
+  border: 1px solid $black;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: $black;
+}
 .font-bg {
   font-size: 1.2em;
 }

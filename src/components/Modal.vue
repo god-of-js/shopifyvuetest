@@ -40,7 +40,7 @@ export default {
 }
 @media screen and (min-width: $tablet) {
   .card-container {
-    width: 35%;
+    width: 30%;
   }
 }
 </style>

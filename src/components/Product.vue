@@ -30,9 +30,10 @@ export default {
 @import "../assets/styles/colors.scss";
 .product {
   display: flex;
-  padding: 5px;
+  padding: 15px 5px;
   background: $white;
   text-align: left;
+  border-bottom: 1px solid $ash;
 }
 h4 {
   color: $black;

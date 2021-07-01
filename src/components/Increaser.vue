@@ -1,10 +1,10 @@
 <template>
   <div class="increaser">
-    <custom-button classList="grey-border font-bg" @click="subtract">
+    <custom-button classList="grey-border font-bg" @click.native="subtract">
       -</custom-button
     >
-    <input type="number" v-model="number" />
-    <custom-button classList="grey-border font-bg" @click="add"
+    <input type="number" v-model="number" @input="$emit('getInput', number)" />
+    <custom-button classList="grey-border font-bg" @click.native="add"
       >+</custom-button
     >
   </div>
@@ -22,10 +22,14 @@ export default {
   },
   methods: {
     subtract() {
-      if (this.number > 1) {
-        this.number = -1;
-        this.$emit("subtract", this.number);
+      if (this.number !== 0) {
+        this.number -= 1;
+        this.$emit("getInput", this.number);
       }
+    },
+    add() {
+      this.number += 1;
+      this.$emit("getInput", this.number);
     },
   },
 };
