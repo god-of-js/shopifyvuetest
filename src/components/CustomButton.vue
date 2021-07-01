@@ -33,4 +33,12 @@ button {
   color: $white;
   padding: 13px 40px;
 }
+.grey-border {
+  border: 2px solid $ash;
+  background: $white;
+  border-radius: 4px;
+}
+.font-bg {
+  font-size: 1.2em;
+}
 </style>

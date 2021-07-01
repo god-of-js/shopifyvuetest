@@ -2,6 +2,7 @@
   <div id="app">
     <top-nav />
     <router-view />
+    <modal />
   </div>
 </template>
 <script>
@@ -9,6 +10,7 @@ export default {
   name: "App",
   components: {
     TopNav: () => import("./components/TopNav.vue"),
+    Modal: () => import("./components/Modal.vue"),
   },
 };
 </script>
