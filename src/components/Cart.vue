@@ -2,7 +2,9 @@
   <div class="cart">
     <header>
       <span>Cart(8 items)</span>
-      <img src="../assets/images/close.svg" alt="close" width="15" />
+      <custom-button @click.native="closeModal">
+        <img src="../assets/images/close.svg" alt="close" width="15"
+      /></custom-button>
     </header>
     <div class="body">
       <product v-for="(product, index) in 4" :key="index" />
@@ -27,6 +29,11 @@ export default {
   components: {
     Product: () => import("./Product"),
     CustomButton,
+  },
+  methods: {
+    closeModal() {
+      this.$store.commit("setModal", {});
+    },
   },
 };
 </script>

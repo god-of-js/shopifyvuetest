@@ -1,12 +1,13 @@
 <template>
   <div class="modal">
     <div class="card-container">
-      <component :is="componentId" />
+      <component :is="modalComponent" />
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "Modal",
   data: () => {
@@ -14,8 +15,12 @@ export default {
       componentId: "Cart",
     };
   },
+  computed: {
+    ...mapState(["modalComponent"]),
+  },
   components: {
     Cart: () => import("./Cart.vue"),
+    ResponsiveNavigation: () => import("./ResponsiveNavigation.vue"),
   },
 };
 </script>

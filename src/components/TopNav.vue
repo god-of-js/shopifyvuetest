@@ -1,6 +1,9 @@
 <template>
   <div class="TopNav">
-    <custom-button class="menu">
+    <custom-button
+      class="menu"
+      @click.native="openModal('ResponsiveNavigation')"
+    >
       <img src="../assets/images/menu.svg" alt="menu" width="20" />
     </custom-button>
     <img src="../assets/images/logo.svg" alt="ancient treasures" width="170" />
@@ -13,7 +16,7 @@
       <custom-button class="search">
         <img src="../assets/images/search.svg" alt="cart" width="20" />
       </custom-button>
-      <custom-button class="cart">
+      <custom-button class="cart" @click.native="openModal('Cart')">
         <img src="../assets/images/cart.svg" alt="cart" width="20" />
       </custom-button>
     </nav>
@@ -42,6 +45,14 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    openModal(comp) {
+      this.$store.commit("setModal", {
+        modalState: true,
+        modalComponent: comp,
+      });
+    },
   },
 };
 </script>

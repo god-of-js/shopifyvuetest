@@ -2,15 +2,19 @@
   <div id="app">
     <top-nav />
     <router-view />
-    <modal />
+    <modal v-if="modalState" />
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
 export default {
   name: "App",
   components: {
     TopNav: () => import("./components/TopNav.vue"),
     Modal: () => import("./components/Modal.vue"),
+  },
+  computed: {
+    ...mapState(["modalState"]),
   },
 };
 </script>
