@@ -34,9 +34,10 @@ button {
   padding: 13px 40px;
 }
 .grey-border {
-  border: 2px solid $ash;
   background: $white;
-  border-radius: 4px;
+  border: 1px solid $lighter-ash;
+  box-sizing: border-box;
+  box-shadow: inset 0px -2px 2px $box-shadow;
 }
 .black-border {
   background: $white;

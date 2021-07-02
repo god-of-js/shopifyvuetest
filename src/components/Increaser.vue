@@ -41,10 +41,20 @@ export default {
   display: flex;
   margin-top: 15px;
 }
+button {
+  &:first-child {
+    border-radius: 4px 0px 0px 4px;
+  }
+  &:first-child {
+    border-radius: 0px 4px 4px 0px;
+  }
+}
 input {
-  border: 2px solid $ash;
   width: 70px;
-  border-radius: 4px;
   outline: none;
+  background: $white;
+  border: 1px solid $lighter-ash;
+  box-sizing: border-box;
+  box-shadow: inset 0px 2px 2px $box-shadow;
 }
 </style>

@@ -5,8 +5,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    modalState: true,
-    modalComponent: "ResponsiveNavigation",
+    modalState: false,
+    modalComponent: "",
   },
   mutations: {
     setModal(state, params = {}) {

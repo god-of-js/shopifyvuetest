@@ -62,9 +62,9 @@ export default {
 @import "../assets/styles/colors.scss";
 .TopNav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 7%;
 }
 nav {
   display: flex;
