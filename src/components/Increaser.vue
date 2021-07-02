@@ -39,18 +39,13 @@ export default {
 @import "../assets/styles/colors.scss";
 .increaser {
   display: flex;
-  margin-top: 15px;
 }
 button {
-  &:first-child {
-    border-radius: 4px 0px 0px 4px;
-  }
-  &:first-child {
-    border-radius: 0px 4px 4px 0px;
-  }
+  width: 30px;
 }
 input {
   width: 70px;
+  height: 40px;
   outline: none;
   background: $white;
   border: 1px solid $lighter-ash;
