@@ -6,6 +6,10 @@
         <img src="../assets/images/close.svg" alt="close" width="15"
       /></custom-button>
     </header>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ea dolorum.
+    Atque, ad corrupti, exercitationem libero illo tenetur facilis sed numquam
+    dolor iure et enim repellat rem voluptatum quibusdam? Expedita.
+    <pre>{{ products }}</pre>
     <div class="body">
       <product v-for="(product, index) in 4" :key="index" />
     </div>
@@ -23,17 +27,25 @@
 </template>
 
 <script>
+import { ALL_PRODUCTS } from "@/constants/graphql";
 import CustomButton from "./CustomButton.vue";
 export default {
   name: "Cart",
+  apollo: {
+    products: { query: ALL_PRODUCTS },
+  },
   components: {
     Product: () => import("./Product"),
     CustomButton,
+  },
+  mounted() {
+    this.getCart();
   },
   methods: {
     closeModal() {
       this.$store.commit("setModal", {});
     },
+    getCart() {},
   },
 };
 </script>
